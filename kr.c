@@ -11,44 +11,44 @@ unsigned kr(unsigned value, unsigned position, unsigned number);
 int main(){
 
         
-        unsigned int a, p, n, res;
+       unsigned int a, p, n, res;
 
-	printf("Enter the number to be handled\n");
-	scanf("%d", &a);
+       printf("Enter the number to be handled\n");
+       scanf("%d", &a);
 
-	printf("Enter the position of bit and number of bits\n");
-	scanf("%d%d", &p, &n);
+       printf("Enter the position of bit and number of bits\n");
+       scanf("%d%d", &p, &n);
 
-    res = kr(a, p, n);
+       res = kr(a, p, n);
 
-    //if return value is the same send value, it indicates the limits of operation exceeded, else print the new value 
-    if(res != a)
-    {
-        
-	printf("Result is \n");
+       //if return value is the same send value, it indicates the limits of operation exceeded, else print the new value 
+       if(res != a)
+       {
+           
+       printf("Result is \n");
 
-	print_bin(res);
-	printf("\n");
-	return 0;
-    }
-    else
-    {
-    		printf("position and number of bits to be changed exceeded the limit of the size of the number\n");
-    }
+       print_bin(res);
+       printf("\n");
+       return 0;
+       }
+       else
+       {
+       		printf("position and number of bits to be changed exceeded the limit of the size of the number\n");
+       }
 }
 
 void print_bin(unsigned int byte)
 {
-    unsigned int i = 0, temp = 0;
-    i = sizeof(i)*8; /* however many bits are in a int on your platform */
-    temp = temp | 0x1 << (i-1) ;
-    while(i--) {
-       // printf("%x", (byte & temp ));
-       // byte = byte << 1;
-       putchar('0' + ((byte >> i) & 1)); /* loop through and print the bits */
+		unsigned int i = 0, temp = 0;
+		i = sizeof(i)*8; /* however many bits are in a int on your platform */
+		temp = temp | 0x1 << (i-1) ;
+		while(i--) {
+		   // printf("%x", (byte & temp ));
+		   // byte = byte << 1;
+		   putchar('0' + ((byte >> i) & 1)); /* loop through and print the bits */
 
-    }
-    printf("\n");
+		}
+		printf("\n");
 }
 
 
@@ -56,7 +56,7 @@ unsigned kr(unsigned value, unsigned position, unsigned number)
 {
 	
 	unsigned int i = 0,  s = 0, left_val = 0, right_val = 0, orig = 0, temp = 0;
-    s = sizeof(value);
+	s = sizeof(value);
 	s = s*8; /*multiplied to get total number of bits */
 	
 
