@@ -1,4 +1,7 @@
 /* 
+
+	A C program to demonstrate singly linkedlist
+
 	Insert a value at last node
 	print the values
 	delete all nodes which holds a particular value

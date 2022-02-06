@@ -1,3 +1,15 @@
+/* 
+
+	A C program to demonstrate doubly linkedlist
+
+	Insert a value at last node
+	print the values
+	delete all nodes which holds a particular value
+	delete a node at a position
+	Add at a position
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 
