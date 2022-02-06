@@ -87,7 +87,7 @@ unsigned kr(unsigned value, unsigned position, unsigned number)
 			orig = orig >> (s - (position + number));
 			temp =  temp | orig;
 
-			//setting all the bits to right of group of bits need to be changed to zero
+			//setting all the bits to left of group of bits need to be changed to zero
 			temp = temp << (s - ((position + number)));
 			temp = temp << (position);
 			temp = temp >> position;
