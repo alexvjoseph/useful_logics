@@ -4,6 +4,8 @@
 #include <limits.h>
 #include <inttypes.h>
 
+#define WORD_SIZE 8
+
 
 void print_bin(unsigned int byte);
 
@@ -40,7 +42,7 @@ int main(){
 void print_bin(unsigned int byte)
 {
 		unsigned int i = 0, temp = 0;
-		i = sizeof(i)*8; /* however many bits are in a int on your platform */
+		i = sizeof(i)*WORD_SIZE; /* however many bits are in a int on your platform */
 		temp = temp | 0x1 << (i-1) ;
 		while(i--) {
 		   // printf("%x", (byte & temp ));
@@ -57,7 +59,7 @@ unsigned kr(unsigned value, unsigned position, unsigned number)
 	
 	unsigned int i = 0,  s = 0, left_val = 0, right_val = 0, orig = 0, temp = 0;
 	s = sizeof(value);
-	s = s*8; /*multiplied to get total number of bits */
+	s = s*WORD_SIZE; /*multiplied to get total number of bits */
 	
 
 
