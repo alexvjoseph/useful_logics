@@ -67,44 +67,44 @@ unsigned kr(unsigned value, unsigned position, unsigned number)
 	//If the positions to be handled is inside the limit, proceed  
 	if(s- (position + number) >= 0){
 		
-		//Value is shifted right up to the begining of 1st bit to be reversed, 
-		//for setting rest of bits on right to zero
-		left_val =  value >> (s - position);
-        
-        //shifted back to retain the values on left side, having a zero right half
-        left_val = left_val << (s - position);
-         
-		//Value is shifted left up to the end of last bit to be reversed, 
-		//for setting rest of bits on left to zero      
-		right_val = value << position+number ;
+			//Value is shifted right up to the begining of 1st bit to be reversed, 
+			//for setting rest of bits on right to zero
+			left_val =  value >> (s - position);
+			
+			//shifted back to retain the values on left side, having a zero right half
+			left_val = left_val << (s - position);
+			 
+			//Value is shifted left up to the end of last bit to be reversed, 
+			//for setting rest of bits on left to zero      
+			right_val = value << position+number ;
 
-	    //shifted back to retain the values on right side, having a zero left half
-		right_val = right_val >> position+number;
+			//shifted back to retain the values on right side, having a zero left half
+			right_val = right_val >> position+number;
 
-		//Mapping group of bit to be handled to a temporary variable
-		orig = orig >> (s - (position + number));
-        temp =  temp | orig;
+			//Mapping group of bit to be handled to a temporary variable
+			orig = orig >> (s - (position + number));
+			temp =  temp | orig;
 
-        //setting all the bits to right of group of bits need to be changed to zero
-		temp = temp << (s - ((position + number)));
-        temp = temp << (position);
-		temp = temp >> position;
+			//setting all the bits to right of group of bits need to be changed to zero
+			temp = temp << (s - ((position + number)));
+			temp = temp << (position);
+			temp = temp >> position;
 
-        //complimenting the group of bits, however all rest of bits will set to 1 as they are zeros now
-		temp = ~ temp;
+			//complimenting the group of bits, however all rest of bits will set to 1 as they are zeros now
+			temp = ~ temp;
 
-        //steps again to clear left and right bits of the group of bits back to zero
-		temp = temp >> (s - (position + number));
-		temp = temp << (s - (position + number));
-        temp = temp << (position);
-		temp = temp >> position;
+			//steps again to clear left and right bits of the group of bits back to zero
+			temp = temp >> (s - (position + number));
+			temp = temp << (s - (position + number));
+			temp = temp << (position);
+			temp = temp >> position;
 
 
-		printf("\nOriginal value is \n");
-        print_bin(value);
+			printf("\nOriginal value is \n");
+			print_bin(value);
 
-        //bitwise OR to create the required result, left portion | middle portion | right portion
-	    return (temp | left_val | right_val);
+			//bitwise OR to create the required result, left portion | middle portion | right portion
+			return (temp | left_val | right_val);
 	}
 
 	else 
