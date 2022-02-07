@@ -1,3 +1,26 @@
+/* 
+
+A C program to out-put a daimond pattern
+
+####SAMPLE OUT PUT#######
+
+repo$ ./pat1 
+Enter the edge of the square
+5
+    *    
+   * *   
+  *   *  
+ *     * 
+*       *
+ *     * 
+  *   *  
+   * *   
+    *    
+
+
+*/
+
+
 #include <stdio.h>
 
 int  main(){

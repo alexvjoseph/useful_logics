@@ -7,6 +7,104 @@
 	delete all nodes which holds a particular value
 	delete a node at a position
 	Add at a position
+
+	
+
+####SAMPLE OUT PUT#######
+
+repo$ ./dblinked 
+Enter the number of values to be added in the list
+5
+
+Enter the 1 th value to be added in the list
+4
+
+
+Previous adress: NULL Current adress:0x55d609046a80 Next adress: NULL Value: 4
+
+
+
+Enter the 2 th value to be added in the list
+5
+
+
+Previous adress: NULL Current adress:0x55d609046a80 Next adress: 0x55d609046aa0 Value: 4
+Previous adress: 0x55d609046a80 Current adress:0x55d609046aa0 Next adress: NULL Value: 5
+
+
+
+Enter the 3 th value to be added in the list
+6
+
+
+Previous adress: NULL Current adress:0x55d609046a80 Next adress: 0x55d609046aa0 Value: 4
+Previous adress: 0x55d609046a80 Current adress:0x55d609046aa0 Next adress: 0x55d609046ac0 Value: 5
+Previous adress: 0x55d609046aa0 Current adress:0x55d609046ac0 Next adress: NULL Value: 6
+
+
+
+Enter the 4 th value to be added in the list
+7
+
+
+Previous adress: NULL Current adress:0x55d609046a80 Next adress: 0x55d609046aa0 Value: 4
+Previous adress: 0x55d609046a80 Current adress:0x55d609046aa0 Next adress: 0x55d609046ac0 Value: 5
+Previous adress: 0x55d609046aa0 Current adress:0x55d609046ac0 Next adress: 0x55d609046ae0 Value: 6
+Previous adress: 0x55d609046ac0 Current adress:0x55d609046ae0 Next adress: NULL Value: 7
+
+
+
+Enter the 5 th value to be added in the list
+8
+
+
+Previous adress: NULL Current adress:0x55d609046a80 Next adress: 0x55d609046aa0 Value: 4
+Previous adress: 0x55d609046a80 Current adress:0x55d609046aa0 Next adress: 0x55d609046ac0 Value: 5
+Previous adress: 0x55d609046aa0 Current adress:0x55d609046ac0 Next adress: 0x55d609046ae0 Value: 6
+Previous adress: 0x55d609046ac0 Current adress:0x55d609046ae0 Next adress: 0x55d609046b00 Value: 7
+Previous adress: 0x55d609046ae0 Current adress:0x55d609046b00 Next adress: NULL Value: 8
+
+
+
+
+Previous adress: NULL Current adress:0x55d609046a80 Next adress: 0x55d609046aa0 Value: 4
+Previous adress: 0x55d609046a80 Current adress:0x55d609046aa0 Next adress: 0x55d609046ac0 Value: 5
+Previous adress: 0x55d609046aa0 Current adress:0x55d609046ac0 Next adress: 0x55d609046ae0 Value: 6
+Previous adress: 0x55d609046ac0 Current adress:0x55d609046ae0 Next adress: 0x55d609046b00 Value: 7
+Previous adress: 0x55d609046ae0 Current adress:0x55d609046b00 Next adress: NULL Value: 8
+
+
+Enter the value to be deleted from the list
+6
+
+
+Previous adress: NULL Current adress:0x55d609046a80 Next adress: 0x55d609046aa0 Value: 4
+Previous adress: 0x55d609046a80 Current adress:0x55d609046aa0 Next adress: 0x55d609046ae0 Value: 5
+Previous adress: 0x55d609046aa0 Current adress:0x55d609046ae0 Next adress: 0x55d609046b00 Value: 7
+Previous adress: 0x55d609046ae0 Current adress:0x55d609046b00 Next adress: NULL Value: 8
+
+
+Enter the value and position to be added to the list
+9 5
+
+
+Previous adress: NULL Current adress:0x55d609046a80 Next adress: 0x55d609046aa0 Value: 4
+Previous adress: 0x55d609046a80 Current adress:0x55d609046aa0 Next adress: 0x55d609046ae0 Value: 5
+Previous adress: 0x55d609046aa0 Current adress:0x55d609046ae0 Next adress: 0x55d609046b00 Value: 7
+Previous adress: 0x55d609046ae0 Current adress:0x55d609046b00 Next adress: 0x55d609046ac0 Value: 8
+Previous adress: 0x55d609046b00 Current adress:0x55d609046ac0 Next adress: NULL Value: 9
+
+
+Enter the position to be deleted from the list
+3
+
+
+Previous adress: NULL Current adress:0x55d609046a80 Next adress: 0x55d609046aa0 Value: 4
+Previous adress: 0x55d609046a80 Current adress:0x55d609046aa0 Next adress: 0x55d609046b00 Value: 5
+Previous adress: 0x55d609046aa0 Current adress:0x55d609046b00 Next adress: 0x55d609046ac0 Value: 8
+Previous adress: 0x55d609046b00 Current adress:0x55d609046ac0 Next adress: NULL Value: 9
+
+
 */
 
 
@@ -231,8 +329,8 @@ int main(){
 
         for(i=0;i<n;i++){
                 printf("\nEnter the %d th value to be added in the list\n", i+1);
-//                scanf("%d", &val);
-                addList(i);
+                scanf("%d", &val);
+                addList(val);
 	        printList();
         }
 

@@ -1,3 +1,24 @@
+/* 
+
+A C program to out-put a square
+
+####SAMPLE OUT PUT#######
+
+./pat2
+Enter the edge size
+7
+* * * * * * * 
+*           * 
+*           * 
+*           * 
+*           * 
+*           * 
+* * * * * * * 
+
+
+*/
+
+
 #include <stdio.h>
 
 int main(){

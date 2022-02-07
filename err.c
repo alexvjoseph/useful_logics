@@ -1,3 +1,22 @@
+/* 
+
+A C program to add up bits in a byte
+
+####SAMPLE OUT PUT BASED ON THE HARDCODED VALUES IN THE CODE #######
+
+repo$ ./err
+00111000
+result is 3
+11111111
+result is 11
+00001111
+
+
+
+
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>

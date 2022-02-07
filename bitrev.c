@@ -1,3 +1,24 @@
+/* 
+
+A C program to reverse bits of a byte
+
+####SAMPLE OUT PUT#######
+
+repo$ ./bitrev
+Enter the number to be reversed
+235
+Binary representation of the number enetered is:
+11101011
+Hex representation of the value is eb: and size is 1
+Number enetered originally is:
+11101011
+Number reversed is:
+11010111
+
+
+
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>

@@ -1,7 +1,25 @@
 /* 
 
-Christmas tree
-Have to be validated
+A C program to out-put a christmas tree pattern
+
+####SAMPLE OUT PUT#######
+
+repo$ ./tree
+Enter the level
+10
+                                                               
+                                  *                            
+                               *  *  *                         
+                            *  *  *  *  *                      
+                         *  *  *  *  *  *  *                   
+                      *  *  *  *  *  *  *  *  *                
+                   *  *  *  *  *  *  *  *  *  *  *             
+                *  *  *  *  *  *  *  *  *  *  *  *  *          
+             *  *  *  *  *  *  *  *  *  *  *  *  *  *  *       
+          *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *    
+       *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  * 
+repo$ 
+
 
 */
 

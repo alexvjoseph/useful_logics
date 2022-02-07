@@ -1,3 +1,23 @@
+/*A C program to invert group of bits in an unsigned integer
+
+  Below example: Flip 4 bits from psotion 28
+
+   repo$ ./kr
+   Enter the number to be handled
+   48484848   
+   Enter the position of bit and number of bits
+   28
+   4
+   
+   Original value is 
+   00000010111000111101000111110000
+   Result is 
+   00000010111000111101000111111111
+
+*/
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
