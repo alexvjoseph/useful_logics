@@ -2,17 +2,19 @@
 
   Below example: Flip 4 bits from psotion 28
 
-   repo$ ./kr
-   Enter the number to be handled
-   48484848   
-   Enter the position of bit and number of bits
-   28
-   4
-   
-   Original value is 
-   00000010111000111101000111110000
-   Result is 
-   00000010111000111101000111111111
+
+####SAMPLE OUT PUT#######
+repo$ ./kr
+Enter the number to be handled
+48484848   
+Enter the position of bit and number of bits
+28
+4
+
+Original value is 
+00000010111000111101000111110000
+Result is 
+00000010111000111101000111111111
 
 */
 
