@@ -112,6 +112,7 @@ int deleteVal(int val){
 	if(temp != NULL && temp->val == val){
 		head = temp->next;
 		free(temp);
+		temp = NULL;
 	}
 	if(head == NULL){
 		return 0;
@@ -122,6 +123,7 @@ int deleteVal(int val){
 		if(temp->val==val){
 					prev->next = temp->next;
 					free(temp);
+					temp = NULL;
 					return 1;
 				}
 		prev = temp;
@@ -152,6 +154,7 @@ void deletePosition(int n){
 
 					prev->next = temp->next;
 					free(temp);
+					temp = NULL;
 					return;
 
 				}

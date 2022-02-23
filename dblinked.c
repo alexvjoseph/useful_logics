@@ -7,9 +7,6 @@
 	delete all nodes which holds a particular value
 	delete a node at a position
 	Add at a position
-
-	TO DO: set all dangling pointer to NULL
-
 	
 
 ####SAMPLE OUT PUT#######
@@ -197,11 +194,13 @@ int delVal(int val){
 	if(temp->val == val){
 		if(temp->next == NULL){
 			free(temp);
+			temp = NULL;
 			return 0;
 		}
 		temp->next->prev = NULL;
 		head = temp->next;
 		free(temp);
+		temp = NULL;
 		return 1;
 	}
 
@@ -228,6 +227,7 @@ int delVal(int val){
 				temp->next->prev = temp->prev;
 			}
 			free(temp);
+			temp = NULL;
 			return 1;
 		}
 
@@ -292,12 +292,14 @@ void delPos(int n)
 								traverse->next->prev = NULL;
 								head = traverse->next;
 								free(traverse);
+								traverse = NULL;
 								return;
 							}
 						       //if node is an in between node
 							traverse->next->prev = traverse->prev;
 							traverse->prev->next = traverse->next;
 							free(traverse);
+							traverse = NULL;
 							return;
 						}
 					//if node is  last node.
@@ -318,6 +320,7 @@ void delPos(int n)
 						}
 					traverse->prev->next = NULL;
 					free(traverse);
+					traverse = NULL;
                                         return;
                                 }
 			//next node is considered and count is increased
