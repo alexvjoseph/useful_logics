@@ -22,7 +22,15 @@ int  main(){
 
 	printf("\nFibonacci Series: %d, %d, ", i, next);
 
-	sum = prev + next;
+	//corrected the logic, 
+	// Earlier error
+	// Fibonacci Series: 0, 1, 2, 2, 3, 5, 8, 13, 21, 34, 55, 89
+	//
+	// Corrected result
+	// Fibonacci Series: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89
+	//
+
+	sum = 1; //correction
 
 	while(sum < n)
 	{
@@ -43,8 +51,8 @@ int  main(){
 
 	     sum = prev + next;
 
-		prev = next;
-		next = sum;
+		 prev = next;
+		 next = sum;
 
 	}
 

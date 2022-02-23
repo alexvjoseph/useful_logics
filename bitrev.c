@@ -48,6 +48,7 @@ int main(){
 	printf("Hex representation of the value is %x: and size is %d\n", a, s);
 
 	while(i < 8){
+		//reverse is shifted here leftwards to avoid an extra shift for the last bit
 		rev = rev<<1;
 		rev = rev | a & 0x1;
 		a = a>>1;

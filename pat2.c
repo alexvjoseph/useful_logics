@@ -31,6 +31,7 @@ int main(){
 	for(i=0; i<n; i++){
 		for(j=0;j<n;j++){
 
+			//print on edges
 			if(i==0 || j == 0 || i == (n-1) || j == (n-1))
 			{
 				printf("* ");

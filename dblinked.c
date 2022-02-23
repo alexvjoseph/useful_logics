@@ -8,6 +8,8 @@
 	delete a node at a position
 	Add at a position
 
+	TO DO: set all dangling pointer to NULL
+
 	
 
 ####SAMPLE OUT PUT#######
@@ -157,7 +159,7 @@ void printList(){
 		printf("List is empty\n\n");
 	}
 
-	//traverse through the list
+	//traverse through the list and do memory safe checks for preventing the corruption
 	while(last != NULL){
 		if(last->prev!=NULL && last->next!=NULL){
 			printf("Previous adress: %p Current adress:%p Next adress: %p Value: %d\n", last->prev, last, last->next, last->val);
@@ -299,7 +301,16 @@ void delPos(int n)
 							return;
 						}
 					//if node is  last node.
-					if(traverse->prev == NULL){
+					if(traverse->prev == NULL){ //should it be 'travese->next' //need to recheck the logic
+
+					//logic is correct, however let the comment on line 304 stay for quick decode of logic in future,
+					//Explanation: 
+					//line 289 checks whether traverse->next != NULL 
+					//when flow reached at line 304, it is already determined that traverse->next == NULL and here check is for 
+					//whether traverse->previous == NULL, 
+					//which indicates this linked list is having a single node, with previous and next pointers to NULL
+					//so the original short comment at below 313 is correct. 
+
 					//if list has a single node **special case, then node is head
 						free(head);
 						head = NULL; // for avoid dangling
