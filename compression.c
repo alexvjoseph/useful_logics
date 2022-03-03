@@ -404,6 +404,6 @@ int byte_decompress (unsigned char *data, unsigned int data_size)
 
 void print_hex(unsigned char byte)
 {
-    printf("%x, ", byte);
+    printf("0x%x, ", byte);
 
 }
