@@ -1,3 +1,3 @@
 # useful_logics
 
-Basic bit operations, linkedlists and spatial logics for quick reference
+Basic bit operations, linkedlists, spatial logics and a compression logic for quick reference
